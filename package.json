@@ -1,0 +1,18 @@
+{
+  "name": "CypressTutorials",
+  "version": "1.0.0",
+  "description": "This is my Cypress Project based on Udemy Tutorials",
+  "main": "index.js",
+  "scripts": {
+    "runner": "cypress open --e2e --browser chrome "
+  },
+  "keywords": [],
+  "author": "Raji Venkatesh",
+  "license": "ISC",
+  "dependencies": {
+    "cypress": "^10.9.0"
+  },
+  "devDependencies": {
+    "cypress-xpath": "^2.0.1"
+  }
+}
