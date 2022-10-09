@@ -1,10 +1,10 @@
 {
-  "name": "CypressTutorials",
+  "name": "cypresstutorials",
   "version": "1.0.0",
   "description": "This is my Cypress Project based on Udemy Tutorials",
   "main": "index.js",
   "scripts": {
-    "runner": "cypress open --e2e --browser chrome "
+    "runner": "cypress open --e2e --browser chrome --config baseUrl=http://uitestingplayground.com --env demoVar=Hello_from_Package_Json_file"
   },
   "keywords": [],
   "author": "Raji Venkatesh",
@@ -13,6 +13,7 @@
     "cypress": "^10.9.0"
   },
   "devDependencies": {
+    "cypress-real-events": "^1.7.1",
     "cypress-xpath": "^2.0.1"
   }
 }
