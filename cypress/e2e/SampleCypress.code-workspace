@@ -1,0 +1,26 @@
+{
+	"folders": [
+		{
+			"path": "../../../SampleCypress"
+		},
+		{
+			"path": "../../../BarnesAndNobleDemo"
+		},
+		{
+			"path": "../../../CypressDemo"
+		},
+		{
+			"path": "../../../JavaScriptPractice"
+		},
+		{
+			"path": "../.."
+		},
+		{
+			"path": "../../../../vets-website"
+		},
+		{
+			"path": "../../../PracticeCypress"
+		}
+	],
+	"settings": {}
+}
