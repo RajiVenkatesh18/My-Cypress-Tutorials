@@ -22,11 +22,12 @@ describe.skip('Access links Using Cypress', () => {
 
 })
 describe.only('Intercepting API(spying)', () => {
+
     beforeEach(() => {
         cy.visit(`${Cypress.env('demoQA')}/links`)
         cy.intercept('GET', `${Cypress.env('demoQA')}/created`).as('linkStatus')
     })
-    it('First step without clicking the link', () => {
+    it('Validating API intercept', () => {
         cy.get('a#created').click()
         cy.wait('@linkStatus').then((request) => {
             cy.log('This is the request intercepted', request)

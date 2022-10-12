@@ -23,3 +23,16 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+
+
+
+//Custom Command for Login 
+
+
+Cypress.Commands.add('checklogin', (username, password) => {
+    cy.visit(`${Cypress.env('demoQA')}/login`)
+    cy.get("#userName").type(username)
+    cy.get("#password").type(password)
+    cy.get("#login").click()
+
+})
