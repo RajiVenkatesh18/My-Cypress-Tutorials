@@ -2,11 +2,15 @@ const { defineConfig } = require("cypress");
 //import { defineConfig } from 'cypress'
 
 module.exports = defineConfig({
+  reporter: 'cypress-mochawesome-reporter',
   e2e: {
     baseUrl: 'http://uitestingplayground.com',
     experimentalSessionAndOrigin: true,
     setupNodeEvents(on, config) {
-      // implement node event listeners here
+
+      //for mochawesome reporter
+      require("cypress-mochawesome-reporter/plugin")(on);
+
     },
     env: {
       demoVar: 'Testing env variable in Cypress.config.js',
@@ -20,5 +24,22 @@ module.exports = defineConfig({
   pageLoadTimeout: 60000,
   viewportHeight: 1200,
   viewportWidth: 1400,
+  reporterOptions: {
+    charts: true,
+    reportPageTitle: 'My Cypress Test Suite Report',
+    embeddedScreenshots: true,
+    inlineAssets: true,
+    saveAllAttempts: false,
+  },
 
+  "retries": {
+    // Configure retry attempts for `cypress run`
+    // Default is 0
+    "runMode": 2,
+    // Configure retry attempts for `cypress open`
+    // Default is 0
+    "openMode": 1
+  },
+  video: true,
+  screenshotOnRunFailure: true,
 });

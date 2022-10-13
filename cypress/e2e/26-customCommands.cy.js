@@ -8,7 +8,7 @@ describe('First Page Object Using Cypress', () => {
 
     it('Login Using Valid Credentials', () => {
 
-        cy.checklogin('test', 'Test1234*')
+        cy.checklogin('test1', 'Test1234*')
         cy.url().should('contain', 'profile')
         cy.get("div[class='main-header']").should('have.text', 'Profile')
         cy.get('#userName-value').should('have.text', 'test')
