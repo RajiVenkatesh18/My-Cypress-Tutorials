@@ -4,6 +4,7 @@ const { defineConfig } = require("cypress");
 module.exports = defineConfig({
   e2e: {
     baseUrl: 'http://uitestingplayground.com',
+    experimentalSessionAndOrigin: true,
     setupNodeEvents(on, config) {
       // implement node event listeners here
     },
@@ -19,4 +20,5 @@ module.exports = defineConfig({
   pageLoadTimeout: 60000,
   viewportHeight: 1200,
   viewportWidth: 1400,
+
 });
