@@ -23,22 +23,22 @@ require('cypress-xpath');
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
 
-beforeEach(() => {
-    cy.log('Executing Before Each Global Hook')
-    cy.session('session', () => {
-        cy.visit(`${Cypress.env('demoQA')}/login`)
-        cy.get('#userName').type('test')
-        cy.get('#password').type('Test1234*')
-        cy.get('#login').click()
-        cy.url().should('contain', 'profile')
-    })
-})
+// beforeEach(() => {
+//     cy.log('Executing Before Each Global Hook')
+//     cy.session('session', () => {
+//         cy.visit(`${Cypress.env('demoQA')}/login`)
+//         cy.get('#userName').type('test')
+//         cy.get('#password').type('Test1234*')
+//         cy.get('#login').click()
+//         cy.url().should('contain', 'profile')
+//     })
+// })
 
-after(() => {
-    cy.clearCookies()
-    cy.getCookies().then((cookies) => {
-        cy.log("Cookies", cookies)
-        expect(cookies).to.have.length(0)
+// after(() => {
+//     cy.clearCookies()
+//     cy.getCookies().then((cookies) => {
+//         cy.log("Cookies", cookies)
+//         expect(cookies).to.have.length(0)
 
-    })
-})
+//     })
+// })
