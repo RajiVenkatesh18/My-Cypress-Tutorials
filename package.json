@@ -16,6 +16,7 @@
   "devDependencies": {
     "cypress-mochawesome-reporter": "^3.2.3",
     "cypress-real-events": "^1.7.1",
-    "cypress-xpath": "^2.0.1"
+    "cypress-xpath": "^2.0.1",
+    "node-xlsx": "^0.21.0"
   }
 }
