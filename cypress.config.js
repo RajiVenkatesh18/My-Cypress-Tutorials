@@ -1,12 +1,17 @@
 const { defineConfig } = require("cypress");
 //import { defineConfig } from 'cypress'
 
+//for file download verification
+const { verifyDownloadTasks } = require('cy-verify-downloads');
 module.exports = defineConfig({
   reporter: 'cypress-mochawesome-reporter',
   e2e: {
     baseUrl: 'http://uitestingplayground.com',
     experimentalSessionAndOrigin: true,
     setupNodeEvents(on, config) {
+
+      //for file download verification
+      on('task', verifyDownloadTasks);
 
       //for mochawesome reporter
       require("cypress-mochawesome-reporter/plugin")(on);
