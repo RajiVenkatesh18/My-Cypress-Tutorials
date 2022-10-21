@@ -9,6 +9,7 @@ describe("Downloading a File in Cypress", () => {
     it("Demo Download a File", () => {
 
         cy.get('#downloadButton').click()
+        cy.verifyDownload('sampleFile.jpeg')
 
     })
 
