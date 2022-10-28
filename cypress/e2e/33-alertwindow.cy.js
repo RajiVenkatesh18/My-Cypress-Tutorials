@@ -39,4 +39,18 @@ describe('Handling Alert Windows', () => {
 
     })
 
+    it('JS Prompt', () => {
+        cy.window().then((window) => {
+            cy.stub(window, "prompt")
+                .returns("This is the text from JS Prompt.")
+            cy.get("button[onclick='jsPrompt()']").click()
+
+
+        })
+        cy.get('#result').should('have.text', "You entered: This is the text from JS Prompt.")
+    })
+
+
+
 })
+
